@@ -2,9 +2,9 @@
 /**
 *_abs - Display abs
 *
-*Return: absolut value
-*
 *@n: number to verify
+*
+*Return: if is a positive zero or negative
 */
 int _abs(int n)
 {
