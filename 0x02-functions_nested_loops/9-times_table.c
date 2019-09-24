@@ -4,41 +4,43 @@
 */
 void times_table(void)
 {
-int line, column;
-int digit1, digit2;
-int multiple;
+int a, b, c, digit1, digit2;
 
-for (line = 0; line <= 9; line++)
+for (a = 0; a <= 9; a++)
 {
-for (column = 0; column <= 9; column++)
+for (b = 0; b <= 9; b++)
 {
-multiple = line * column;
-if (multiple >= 10)
+c = a * b;
+if (c >= 10)
 {
-digit1 = multiple % 10;
-digit2 = multiple / 10;
-_putchar(' ');
+digit1 = c / 10;
+digit2 = c % 10;
+
 _putchar(digit1 + '0');
 _putchar(digit2 + '0');
 }
 else
 {
-if (column != 0)
+if (a != 0)
 {
 _putchar(' ');
 }
-_putchar(multiple + '0');
-
+if (digit1 == 0)
+{
+_putchar (' ');
 }
-if (column != 9)
+_putchar(c + '0');
+}
+if (b != 9)
 {
 _putchar(',');
+_putchar(' ');
 }
-if (column == 9)
+if (b == 9)
 {
 _putchar('\n');
 }
 }
-column = 0;
+b = 0;
 }
 }
