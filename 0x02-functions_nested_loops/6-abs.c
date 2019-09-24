@@ -2,13 +2,13 @@
 /**
 *_abs - Display abs
 *
-*Return: if is a positive zero or negative
+*Return: absolut value
 *
 *@n: number to verify
 */
 int _abs(int n)
 {
-if (n < 0)
+if (n < 0)  
 {
 n = n * -1;
 return (n);
