@@ -25,7 +25,7 @@ if (a != 0)
 {
 _putchar(' ');
 }
-if (digit1 == 0)
+if (a == 0)
 {
 _putchar (' ');
 }
