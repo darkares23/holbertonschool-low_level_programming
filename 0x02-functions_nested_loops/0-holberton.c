@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
 *
-**main - Display message
+*main - Display message
 *
 *Return: always 0
 */
