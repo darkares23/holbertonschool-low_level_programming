@@ -2,7 +2,7 @@
 /**
 *main - Display message
 *
-*Return: none
+*Return: always 0
 */
 int main(void)
 {

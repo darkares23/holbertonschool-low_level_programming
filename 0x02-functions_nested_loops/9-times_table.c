@@ -26,7 +26,6 @@ else
 if (column != 0)
 {
 _putchar(' ');
-_putchar(' ');
 }
 _putchar(multiple + '0');
 
