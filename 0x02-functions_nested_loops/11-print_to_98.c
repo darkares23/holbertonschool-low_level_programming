@@ -17,10 +17,10 @@ printf("%d, ", a);
 }
 else if (a > 98)
 {
-for (; a >= 98; a--)
+for (; a > 98; a--)
 printf("%d, ", a);
+printf("%d\n",98);
 }
 if (a == 98)
 printf("%d\n", a);
-_putchar('\n');
 }
