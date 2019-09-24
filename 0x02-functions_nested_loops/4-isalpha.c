@@ -1,7 +1,9 @@
 #include "holberton.h"
 /**
 *_isalpha - Display message
+*
 *Return: true
+*
 *@c: parameter to verify
 */
 int _isalpha(int c)
