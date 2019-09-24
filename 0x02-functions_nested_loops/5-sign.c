@@ -2,9 +2,9 @@
 /**
 *print_sign - Display message
 *
-*Return: if is a positive zero or negative
-*
 *@n: number to verify
+*
+*Return: if is a positive zero or negative
 */
 int print_sign(int n)
 {
