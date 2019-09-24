@@ -1,6 +1,8 @@
 #include "holberton.h"
 /**
 *jack_bauer - Display all minutes in jack day
+*
+*Return: Always 0
 */
 void jack_bauer(void)
 {
