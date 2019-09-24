@@ -1,10 +1,8 @@
 #include "holberton.h"
 /**
-*_abs - Display abs
-*
-*@n: number to verify
-*
-*Return: if is a positive zero or negative
+ *_abs - Display abs
+ *@n: number to verify
+ *Return: if is a positive zero or negative
 */
 int _abs(int n)
 {
