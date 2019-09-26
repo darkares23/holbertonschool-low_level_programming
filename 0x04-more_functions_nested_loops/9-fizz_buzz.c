@@ -20,4 +20,5 @@ else
 printf("%d ", numbers);
 }
 }
+printf("\n");
 }
