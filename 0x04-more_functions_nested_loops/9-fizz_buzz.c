@@ -1,9 +1,8 @@
 #include<stdio.h>
 /**
-*print_diagonal - prints a diagonal line
+*main - prints a diagonal line
 *Return: 14 lines of numbers
 *
-*@n: Large of the line
 */
 int main(void)
 {
