@@ -15,7 +15,7 @@ for (lines = 0; lines < size; lines++)
 for (triangle = 0; triangle < size; triangle++)
 {
 sp = size - lines - 1;
-if (triangle <= sp)
+if (triangle < sp)
 _putchar (' ');
 else
 {
