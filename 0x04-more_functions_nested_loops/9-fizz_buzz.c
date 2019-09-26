@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - print if is 3 Fizz 5 Buzz or FizzBuzz.
  *
