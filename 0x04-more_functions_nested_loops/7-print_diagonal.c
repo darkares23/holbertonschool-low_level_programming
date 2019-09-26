@@ -5,23 +5,22 @@
 *
 *@n: Large of the line
 */
-void print_diagonal(int n)
+int main(void)
 {
-int count, count_2;
-
-for (count = 0; count < n; count++)
+int number;
+for (number = 1; number <= 100; number++)
 {
-for (count_2 = 0; count_2 <= count; count_2++)
-{
-if (count_2 != count)
-{
-_putchar(' ');
-}
+if ((number % 3) == 0 && (number % 5) != 0)
+printf("Fizz ");
+else if (number == 100)
+printf("Buzz");
+else if ((number % 5) == 0 && (number % 3) != 0)
+printf("Buzz ");
+else if ((number % 3) == 0 && (number % 3) == 0)
+printf("FizzBuzz ");
 else
-_putchar('\\');
+printf("%d ", number);
 }
-_putchar('\n');
-}
-if (n <= 0)
-_putchar('\n');
+printf("\n");
+return (0);
 }
