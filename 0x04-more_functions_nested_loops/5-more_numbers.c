@@ -6,9 +6,10 @@
 */
 void more_numbers(void)
 {
-for (int line = 0; line < 10; line++)
+int line, number;
+for ( line = 0; line < 10; line++)
 {
-for (int number = 0; number < 15; number++)
+for ( number = 0; number < 15; number++)
 {
 if (number > 9)
 _putchar((number / 10) + '0');
