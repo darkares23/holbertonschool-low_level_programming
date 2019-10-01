@@ -5,9 +5,9 @@
 *Return: return lenght
 */
 int _strlen(char *s)
-{	int string;
-	for(string = 0; s[string] != 0; string++)
+{	int i;
+	for(i = 0; s[i] != 0; i++)
 	{
 	}
-	return (string);
+	return (i);
 }
