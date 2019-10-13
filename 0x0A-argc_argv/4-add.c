@@ -11,10 +11,7 @@
 
 int main(int argc, char **argv)
 {
-int i, sum;
-
-if (argc < 1)
-	printf("%d\n", 0);
+int i, sum = 0;
 
 for (i = 1; i < argc; i++)
 {
