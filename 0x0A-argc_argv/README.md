@@ -7,3 +7,5 @@
 *Task 1: 1-args.c: Program to count the number of arguments*
 
 *Task 2: Prints all arg strings*
+
+*Task 3: print multiplication of 2 argument numbers *
