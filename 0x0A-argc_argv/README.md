@@ -6,6 +6,8 @@
 
 *Task 1: 1-args.c: Program to count the number of arguments*
 
-*Task 2: Prints all arg strings*
+*Task 2: 2-args.c Prints all arg strings*
 
-*Task 3: print multiplication of 2 argument numbers *
+*Task 3: 3-mul.c print multiplication of 2 argument numbers *
+
+*Task 4: 4-add.c Add two  positive numbers*
