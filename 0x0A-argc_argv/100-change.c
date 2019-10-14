@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
 int number_of_coins = 0, temp;
 
-if  (argc != 2 || atoi(argv[1]) < 48)
+if  (argc != 2)
 {
 printf("Error\n");
 return (1);
@@ -21,7 +21,7 @@ return (1);
 
 temp = atoi(argv[1]);
 
-while (temp != 0)
+while (temp > 0)
 {
 if (temp >= 25)
 temp -= 25;
