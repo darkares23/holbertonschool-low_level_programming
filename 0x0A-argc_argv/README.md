@@ -11,3 +11,5 @@
 *Task 3: 3-mul.c print multiplication of 2 argument numbers *
 
 *Task 4: 4-add.c Add two  positive numbers*
+
+*Task 5: 100-change: Change a number into cents*
