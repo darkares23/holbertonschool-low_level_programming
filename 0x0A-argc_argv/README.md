@@ -1,4 +1,4 @@
-##argc and argv##
+**argc argv**
 
 *This project is to have a idea of the argc and argv to main function*
 
