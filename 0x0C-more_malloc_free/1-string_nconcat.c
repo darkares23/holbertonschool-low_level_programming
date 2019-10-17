@@ -23,7 +23,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = empty_string;
 	for (count1 = 0; s1[count1] != '\0'; count1++)
 		;
-	conca = malloc((count1 + (n * sizeof(*s2) + 1) * sizeof(*conca)));
+	conca = malloc((count1 + (n * sizeof(*s2) + 1)));
 	if (conca == NULL)
 		return (NULL);
 	for (count1 = 0; s1[count1] != '\0'; count1++)
