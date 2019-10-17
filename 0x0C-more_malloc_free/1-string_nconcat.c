@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat - concatenates two strings
- * @s1:stirng 1
- * @s2:string 2
- * @n: n bytesofstring 2
+ * string_nconcat - concatenates 2 strings
+ * @s1: stirng 1
+ * @s2: string 2
+ * @n: n bytes string 2
  * Return: pointer
  */
 
