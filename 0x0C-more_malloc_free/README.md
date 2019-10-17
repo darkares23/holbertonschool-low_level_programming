@@ -6,3 +6,7 @@
 *0-malloc_checked.c : allocate memory using malloc*
 
 *1-string_concat: function that concatenates two strings*
+
+*2-calloc: allocate: Vallocates memory for an array, using malloc*
+
+*3-array_range.c: creates an array of integers.*
