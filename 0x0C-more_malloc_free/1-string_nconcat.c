@@ -24,7 +24,7 @@ if (s2 == NULL)
 
 for (count1 = 0; s1[count1] != '\0'; count1++)
 	;
-conca = malloc((n * sizeof(*s2) + 1) * sizeof(*conca) + count1);
+conca = malloc((count1 + (n * sizeof(*s2) + 1) * sizeof(*conca)));
 
 if (conca == NULL)
 	return (NULL);
@@ -34,6 +34,8 @@ for (count1 = 0; s1[count1] != '\0'; count1++)
 
 for (count2 = 0; s2[count2] != '\0' && count2 <= n; count1++, count2++)
 	conca[count1] = s2[count2];
+
+conca[count1] = '\0';
 
 return (conca);
 
