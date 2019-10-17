@@ -4,3 +4,5 @@
 *and how to use the exit() function*
 
 *0-malloc_checked.c : allocate memory using malloc*
+
+*1-string_concat: function that concatenates two strings*
