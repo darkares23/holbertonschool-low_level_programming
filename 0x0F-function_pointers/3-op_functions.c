@@ -16,6 +16,7 @@ int op_add(int a, int b)
  *
  * @a: num 1
  * @b: num 2
+ * Return: total
  */
 int op_sub(int a, int b)
 {
