@@ -12,7 +12,7 @@ int op_add(int a, int b)
 	return (a + b);
 }
 /**
- * op_add - function to rest
+ * op_sub - function to rest
  *
  * @a: num 1
  * @b: num 2
