@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "3-cal.h"
+#include "3-calc.h"
 /**
  * main - check the code for Holberton School students.
  *@argc: count parameters in command line
@@ -14,18 +14,13 @@ int main(int argc, char **argv)
 
 	if (argc != 4)
 	{
-		printf("Error0s\n");
+		printf("Error\n");
 		exit(98);
-	}
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3] == 0)
-	{
-		printf("Error2\n");
-		exit(100);
 	}
 	p = get_op_func(argv[2]);
 	if (p == NULL)
 	{
-		printf("Error1\n");
+		printf("Error\n");
 		exit(99);
 	}
 	num1 = atoi(argv[1]);
