@@ -1,5 +1,5 @@
 #include "3-calc.h"
-
+#include <string.h>
 /**
  * get_op_func - get function to dop math.
  *@s: operator
@@ -19,7 +19,7 @@ int i = 0;
 
 	while (i < 5)
 	{
-		if (*s == *(ops[i]).op)
+		if (!(strcmp((ops[i]).op,s)))
 		{
 			return (*(ops[i]).f);
 		}
