@@ -3,9 +3,9 @@
 #include "variadic_functions.h"
 
 /**
- * char_print - prints char
- * @list: arguement char
- * @sep: seperator
+ *char_print - prints char
+ *@list: char arg
+ *@sep: seperator
  */
 
 void char_print(va_list list, char *sep)
@@ -14,8 +14,8 @@ void char_print(va_list list, char *sep)
 }
 /**
  * int_print - prints int
- * @list: arguement of list
- * @sep: seperator
+ *@list: char arg
+ *@sep: seperator
  * Return: none
  */
 
@@ -25,8 +25,8 @@ void int_print(va_list list, char *sep)
 }
 /**
  * float_print - prints floats
- * @sep: float to print
- * @list: next arguement of list to print
+ *@list: char arg
+ *@sep: seperator
  * Return: none
  */
 
@@ -35,11 +35,11 @@ void float_print(va_list list, char *sep)
 	printf("%s%f", sep, va_arg(list, double));
 }
 /**
- * string_print - prints string
- * @sep: seperator
- * @list: list to print
- * Return: none
- */
+* string_print - prints string
+*@list: char arg
+*@sep: seperator
+* Return: none
+*/
 
 void string_print(va_list list, char *sep)
 {
@@ -52,8 +52,8 @@ void string_print(va_list list, char *sep)
 }
 
 /**
- * print_all - prints out all stuff
- * @format: format is list of types of arguements
+ * print_all - prints all format
+ * @format: Type of data to print
  */
 
 void print_all(const char * const format, ...)
