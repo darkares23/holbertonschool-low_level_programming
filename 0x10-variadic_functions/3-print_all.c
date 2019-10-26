@@ -21,7 +21,7 @@ void char_print(char *sep, va_list list)
 
 void int_print(char *sep, va_list list)
 {
-	printf("%s%d", sep, va_arg(list, int));
+	printf("%s%i", sep, va_arg(list, int));
 }
 /**
  * float_print - prints floats
