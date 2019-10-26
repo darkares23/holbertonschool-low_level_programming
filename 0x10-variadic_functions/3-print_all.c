@@ -48,7 +48,7 @@ void string_print(char *sep, va_list list)
 	s = va_arg(list, char *);
 	if (s == NULL)
 	{
-		printf("(nil)");
+		printf("%s(nil)", sep);
 		return;
 	}
 	printf("%s%s", sep, s);
