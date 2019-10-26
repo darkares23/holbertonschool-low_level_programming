@@ -7,9 +7,9 @@
  *@list: char arg
  */
 
-void char_print(va_list list)
+void char_print(va_list *list)
 {
-	printf("%c", (char)va_arg(list, int));
+	printf("%c", (char)va_arg(*list, int));
 }
 /**
  * int_print - prints int
@@ -17,9 +17,9 @@ void char_print(va_list list)
  * Return: none
  */
 
-void int_print(va_list list)
+void int_print(va_list *list)
 {
-	printf("%d", va_arg(list, int));
+	printf("%d", va_arg(*list, int));
 }
 /**
  * float_print - prints floats
@@ -27,9 +27,9 @@ void int_print(va_list list)
  * Return: none
  */
 
-void float_print(va_list list)
+void float_print(va_list *list)
 {
-	printf("%f", (float)va_arg(list, double));
+	printf("%f", (float)va_arg(*list, double));
 }
 /**
 * string_print - prints string
@@ -37,13 +37,11 @@ void float_print(va_list list)
 * Return: none
 */
 
-void string_print(va_list list)
+void string_print(va_list *list)
 {
 	char *s;
 
-	s = va_arg(list, char *);
-	if (s == NULL)
-		printf("(nil)");
+	s = va_arg(*list, char *);
 	printf("%s", s);
 }
 
@@ -55,7 +53,7 @@ void string_print(va_list list)
 void print_all(const char * const format, ...)
 {
 
-	format_type form[] = {
+	fmType form[] = {
 		{"c", char_print},
 		{"i", int_print},
 		{"f", float_print},
@@ -76,7 +74,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *(form[j]).fm)
 			{
-				form[j].func(list);
+				form[j].func(&list);
 				if (format[j + 1])
 					printf(", ");
 			}
