@@ -5,54 +5,50 @@
 /**
  *char_print - prints char
  *@list: char arg
- *@sep: seperator
  */
 
-void char_print(va_list list, char *sep)
+void char_print(va_list list)
 {
-	printf("%s%c", sep, va_arg(list, int));
+	printf("%c", va_arg(list, int));
 }
 /**
  * int_print - prints int
  *@list: char arg
- *@sep: seperator
  * Return: none
  */
 
-void int_print(va_list list, char *sep)
+void int_print(va_list list)
 {
-	printf("%s%d", sep, va_arg(list, int));
+	printf("%d", va_arg(list, int));
 }
 /**
  * float_print - prints floats
  *@list: char arg
- *@sep: seperator
  * Return: none
  */
 
-void float_print(va_list list, char *sep)
+void float_print(va_list list)
 {
-	printf("%s%f", sep, va_arg(list, double));
+	printf("%f", va_arg(list, double));
 }
 /**
 * string_print - prints string
 *@list: char arg
-*@sep: seperator
 * Return: none
 */
 
-void string_print(va_list list, char *sep)
+void string_print(va_list list)
 {
 	char *s;
 
 	s = va_arg(list, char *);
 	if (s == NULL)
 		printf("(nil)");
-	printf("%s%s", sep, s);
+	printf("%s", s);
 }
 
 /**
- * print_all - prints all format
+ * print_all - prints all format -m ""
  * @format: Type of data to print
  */
 
@@ -61,7 +57,7 @@ void print_all(const char * const format, ...)
 	va_list list;
 	char *sep;
 
-	sep = "";
+	sep = ", ";
 	int i = 0, j = 0;
 
 	format_type form[] = {
@@ -81,10 +77,13 @@ void print_all(const char * const format, ...)
 		while (j < 4)
 		{
 			if (format[i] == *(form[j]).fm)
-				form[j].func(list, sep);
+			{
+				form[j].func(list);
+				if (format[j + 1])
+					printf("%s", sep);
+			}
 			j++;
 		}
-		sep = ", ";
 		i++;
 	}
 	printf("\n");
