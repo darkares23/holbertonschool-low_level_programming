@@ -9,7 +9,7 @@
 
 void char_print(va_list list)
 {
-	printf("%c", va_arg(list, int));
+	printf("%c", (char)va_arg(list, int));
 }
 /**
  * int_print - prints int
@@ -29,7 +29,7 @@ void int_print(va_list list)
 
 void float_print(va_list list)
 {
-	printf("%f", va_arg(list, double));
+	printf("%f", (float)va_arg(list, double));
 }
 /**
 * string_print - prints string
@@ -54,11 +54,6 @@ void string_print(va_list list)
 
 void print_all(const char * const format, ...)
 {
-	va_list list;
-	char *sep;
-
-	sep = ", ";
-	int i = 0, j = 0;
 
 	format_type form[] = {
 		{"c", char_print},
@@ -67,6 +62,12 @@ void print_all(const char * const format, ...)
 		{"s", string_print},
 		{NULL, NULL}
 	};
+
+	va_list list;
+	char *sep;
+
+	sep = ", ";
+	int i = 0, j = 0;
 
 	va_start(list, format);
 	i = 0;
