@@ -19,7 +19,7 @@ void print_all(const char * const format, ...);
 typedef struct format_t
 {
 	char *fm;
-	void (*func)(va_list *);
+	void (*func)(char *sep, va_list *);
 } fmType;
 
 #endif
