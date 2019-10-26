@@ -21,11 +21,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		str = va_arg(str_list,  char *);
 		if (str == NULL)
-		{
-			str = "(nil)";
+			printf("(nil)");
+		else
 			printf("%s", str);
-		}
-		else if (arg_count == 0)
+
+		if (arg_count == 0)
 			printf("%s%s", str, separator);
 		else
 			printf("%s", str);
