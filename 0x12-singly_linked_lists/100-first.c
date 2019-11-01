@@ -1,6 +1,7 @@
-#include "lists.h"
+#include <stdio.h>
 
 void exe_before (void) __attribute__ ((constructor));
+
 /**
 * exe_before - prints before the main func.
 */
