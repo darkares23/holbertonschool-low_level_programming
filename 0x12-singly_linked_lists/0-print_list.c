@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * print_list - prints the size of linked list and the str
