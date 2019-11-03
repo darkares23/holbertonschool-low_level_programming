@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * rot13 - string to rot13
+ * @str: string parameter
+ * Return: string
+ */
+
 char *rot13(char *str)
 {
 	int i = 0;
