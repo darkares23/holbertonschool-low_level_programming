@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list - prints the size of linked list and the str
+ * print_listint - prints the size of linked list and the str
  * @h: list_t pointer variable
  * Return: i
 */
