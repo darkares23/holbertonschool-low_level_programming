@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i = 0;
-	unsigned long temp = 0, num1 = 1, num2 = 2, acum;
+	unsigned long temp = 0, num1 = 1, num2 = 2, acum = 2;
 
 	for (; acum < 4000000; i++)
 	{
