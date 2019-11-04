@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i = 3;
-	unsigned long temp = 0, num1 = 1, num2 = 2, acum = 2;
+	unsigned long temp = 0, num1 = 1, num2 = 2;
 
 	printf("%ld, %ld, ", num1, num2);
 	for (; i < 98; i++)
