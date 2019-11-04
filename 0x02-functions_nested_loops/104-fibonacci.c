@@ -15,7 +15,7 @@ int main(void)
 	for (; i < 98; i++)
 	{
 		temp = num1 + num2;
-		printf("%ld", temp);
+		printf("%lu", temp);
 		num1 = num2;
 		num2 = temp;
 
