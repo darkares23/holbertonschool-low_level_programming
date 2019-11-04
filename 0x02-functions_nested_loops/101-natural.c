@@ -16,6 +16,6 @@ int main(void)
 		if (i % 3 == 0 || i % 5 == 0)
 			acum += i;
 	}
-	printf("%i\n", i);
+	printf("%i\n", acum);
 	return (0);
 }
