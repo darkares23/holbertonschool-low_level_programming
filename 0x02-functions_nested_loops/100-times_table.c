@@ -7,6 +7,8 @@ void print_times_table(int n)
 {
 	int a, b, result, digit1, digit2, mediumdigit;
 
+	if (n > 15 || n < 0)
+		return;
 	for (a = 0; a <= n; a++)
 	{
 		for (b = 0; b <= n; b++)
