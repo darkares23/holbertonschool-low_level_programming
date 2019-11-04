@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i = 0;
-	int temp = 0, num1 = 1, num2 = 2;
+	unsigned int temp = 0, num1 = 1, num2 = 2;
 
 	for (; i < 50; i++)
 	{
