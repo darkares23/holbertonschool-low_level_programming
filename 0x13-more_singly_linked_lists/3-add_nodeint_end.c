@@ -1,8 +1,9 @@
 #include "lists.h"
 
 /**
- * free_listint - prints the size of linked list and the str
+ * add_nodeint_end - prints the size of linked list and the str
  * @head: list_t pointer variable
+ * @n: const int
  * Return: new node
 */
 
