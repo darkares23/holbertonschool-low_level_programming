@@ -13,13 +13,13 @@ int pop_listint(listint_t **head)
 
 	if (*head == NULL)
 		return (0);
-		
+
 	deleted_value = (*head)->n;
 	ptr_to_del = *head;
 	tmp = *head;
 	tmp = (*head)->next;
 	*head = tmp;
-	
+
 	if (!ptr_to_del)
 	{
 		free(ptr_to_del);
