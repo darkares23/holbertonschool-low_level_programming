@@ -17,4 +17,5 @@ while (*head)
 	*head = tmp->next;
 }
 free(*head);
+*head == NULL;
 }
