@@ -1,23 +1,29 @@
 #include "lists.h"
 
 /**
- * pop_listint - prints the size of linked list and the str
+ * pop_listint - delete the head node of a linked list
  * @head: list_t pointer variable
- * Return: new node
+ * Return: deleted value
 */
 
 int pop_listint(listint_t **head)
 {
-	listint_t *tmp;
+	listint_t *tmp, *ptr_to_del;
 	int deleted_value;
 
+	if (*head == NULL)
+		return (0);
+		
+	deleted_value = (*head)->n;
+	ptr_to_del = *head;
 	tmp = *head;
-	*head = (*head)->next;
-	deleted_value = tmp->n;
-	if (!head)
+	tmp = (*head)->next;
+	*head = tmp;
+	
+	if (!ptr_to_del)
 	{
-		free(head);
-		return (deleted_value);
+		free(ptr_to_del);
 	}
+
 	return (deleted_value);
 }
