@@ -11,7 +11,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int converted_bin = 0, temp = 0, i = 0;
 	int power = 1;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 	while (b[i])
 	{
@@ -19,10 +19,9 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		i++;
 	}
-	i--;
 	while (i)
 	{
-		temp = b[i] - 48;
+		temp = b[i - 1] - 48;
 		converted_bin += (temp * power);
 		power *= 2;
 		i--;
