@@ -10,7 +10,6 @@ int main(int ac, char **av)
 {
 	int fd, fd1, reader = 1024, writer = 0, closer;
 	char *copy[1024];
-
 	mode_t permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (ac != 3)
