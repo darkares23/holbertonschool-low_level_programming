@@ -31,37 +31,42 @@ dlistint_t *create_dnode(const int n)
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-unsigned int count = 1;
-dlistint_t *new_node, *tmp;
+	dlistint_t *new_node = NULL, *temp = NULL;
+	unsigned int i = 0;
 
-tmp = *h;
-new_node = malloc(sizeof(dlistint_t));
-if (new_node == NULL)
-return (NULL);
-
-if (idx == 0)
-{
-new_node->next = tmp;
-new_node->n = n;
-new_node->prev = NULL;
-*h = new_node;
-return (new_node);
-}
-while (count != idx)
-{
-if (tmp == NULL)
-return (NULL);
-tmp = tmp->next;
-count++;
-}
-new_node->next = tmp->next;
-new_node->n = n;
-new_node->prev = tmp;
-tmp->next = new_node;
-if (new_node->next == NULL)
-return (new_node);
-tmp = tmp->next;
-tmp = tmp->next;
-tmp->prev = new_node;
-return (new_node);
+	new_node = create_dnode(n);
+	if (!new_node)
+		return (NULL);
+	if (!h || !(*h))
+		*h = new_node;
+	else
+	{
+		temp = *h;
+		while (idx != i++ && temp->next)
+			temp = temp->next;
+		if (temp->next)
+			new_node->prev = temp->prev;
+		else
+			new_node->prev = temp;
+		if (idx == i)
+		{
+			temp->next = new_node;
+			new_node->prev = temp;
+		}
+		else if (idx == i - 1)
+		{
+			if (temp->prev)
+				temp->prev->next = new_node;
+			else
+				*h = new_node;
+			temp->prev = new_node;
+			new_node->next = temp;
+		}
+		else
+		{
+			free(new_node);
+			return (NULL);
+		}
+	}
+	return (new_node);
 }
