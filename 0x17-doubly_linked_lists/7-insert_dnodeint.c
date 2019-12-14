@@ -31,7 +31,7 @@ dlistint_t *create_dnode(const int n)
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new_node = NULL, *temp = NULL;
+	dlistint_t *new_node, *temp;
 	unsigned int i = 0;
 
 	new_node = create_dnode(n);
@@ -58,7 +58,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			if (temp->prev)
 				temp->prev->next = new_node;
 			else
+			{
 				*h = new_node;
+				new_node->prev = NULL;
+			}
 			temp->prev = new_node;
 			new_node->next = temp;
 		}
