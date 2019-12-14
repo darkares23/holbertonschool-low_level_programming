@@ -1,55 +1,72 @@
 #include "lists.h"
+/**
+ * create_dnode - creates a new DLL node with data
+ * @n: data to add to node
+ *
+ * Return: pointer to newly allocated/populated node
+ */
+dlistint_t *create_dnode(const int n)
+{
+	dlistint_t *new_node = NULL;
+
+	new_node = malloc(sizeof(dlistint_t));
+	if (!new_node)
+		return (NULL);
+
+	new_node->next = NULL;
+	new_node->prev = NULL;
+	new_node->n = n;
+
+	return (new_node);
+}
 
 /**
- * insert_dnodeint_at_index - func for look for a node index in a linked list
- * @h: linked list for free
- * @idx: Node index strat from 0
- * @n: value
- * Return: node at n index
+ * insert_dnodeint_at_index - inserts a node at position
+ * in a doubly linked list
+ * @h: double pointer to the head, so we can modify if needed
+ * @idx: index to insert new node at
+ * @n: data to add to new node
+ *
+ * Return: pointer to new element, NULL on failure.
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *newNode, *temp;
+	dlistint_t *new_node = NULL, *temp = NULL;
 	unsigned int i = 0;
 
-	newNode = malloc(sizeof(dlistint_t));
-	if (!newNode)
+	new_node = create_dnode(n);
+	if (!new_node)
 		return (NULL);
-	newNode->n = n; 
-	newNode->prev = NULL;
 	if (!h)
-		*h = newNode;
+		*h = new_node;
 	else
 	{
 		temp = *h;
 		while (idx != i++ && temp->next)
 			temp = temp->next;
-		if (!temp)
-			return NULL;
 		if (temp->next)
-			newNode->prev = temp->prev;
+			new_node->prev = temp->prev;
 		else
-			newNode->prev = temp;
+			new_node->prev = temp;
 		if (idx == i)
 		{
-			temp->next = newNode;
-			newNode->prev = temp;
-			newNode->next = NULL;
+			temp->next = new_node;
+			new_node->prev = temp;
 		}
 		else if (idx == i - 1)
 		{
 			if (temp->prev)
-				temp->prev->next = newNode;
+				temp->prev->next = new_node;
 			else
-				*h = newNode;
-			temp->prev = newNode;
-			newNode->next = temp;
+				*h = new_node;
+			temp->prev = new_node;
+			new_node->next = temp;
 		}
 		else
 		{
-			free(newNode);
+			free(new_node);
 			return (NULL);
 		}
 	}
-	return (newNode);
+	return (new_node);
 }
