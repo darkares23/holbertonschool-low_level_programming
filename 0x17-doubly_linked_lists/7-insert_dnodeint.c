@@ -19,6 +19,24 @@ dlistint_t *create_dnode(const int n)
 
 	return (new_node);
 }
+#include "lists.h"
+/**
+ * listint_len - doubly linked list
+ * @h: Header of the list to print
+ * Return: the number of nodes
+ */
+
+unsigned int listint_len(const dlistint_t *h)
+{
+	size_t count = 0;
+
+	while (h)
+	{
+		h = h->next;
+		count++;
+	}
+	return (count);
+}
 
 /**
  * insert_dnodeint_at_index - inserts a node at position
@@ -32,42 +50,33 @@ dlistint_t *create_dnode(const int n)
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new_node = NULL, *temp = NULL;
-	unsigned int i = 0;
+	unsigned int i = 0, len = listint_len(*h);
 
 	new_node = create_dnode(n);
-	if (!new_node)
+	if (!h || ((*h) == NULL && idx > 0) || !new_node)
 		return (NULL);
-	if (!h || !(*h))
-		*h = new_node;
+	temp = *h;
+	while (idx != i++ && temp->next)
+		temp = temp->next;
+	if (temp->next)
+		new_node->prev = temp->prev;
+	else
+		new_node->prev = temp;
+	if (idx == len)
+		return (add_dnodeint_end(h, n));
+	else if (idx == i - 1)
+	{
+		if (temp->prev)
+			temp->prev->next = new_node;
+		else
+			return (add_dnodeint(h, n));
+		temp->prev = new_node;
+		new_node->next = temp;
+	}
 	else
 	{
-		temp = *h;
-		while (idx != i++ && temp->next)
-			temp = temp->next;
-		if (temp->next)
-			new_node->prev = temp->prev;
-		else
-			new_node->prev = temp;
-		if (idx == i)
-			new_node = add_dnodeint_end(h, n);
-		else if (idx == i - 1)
-		{
-			if (temp->prev)
-				temp->prev->next = new_node;
-			else
-			{
-				*h = new_node;
-				(*h)->prev = NULL;
-				
-			}
-			temp->prev = new_node;
-			new_node->next = temp;
-		}
-		else
-		{
-			free(new_node);
-			return (NULL);
-		}
+		free(new_node);
+		return (NULL);
 	}
 	return (new_node);
 }
