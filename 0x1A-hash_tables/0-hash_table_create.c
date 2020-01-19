@@ -18,7 +18,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 		free(new_hash_t);
 	}
-
 	while (i < size)
 	{
 		new_hash_t->array[i] = NULL;
@@ -27,5 +26,4 @@ hash_table_t *hash_table_create(unsigned long int size)
 	new_hash_t->size = size;
 
 	return (new_hash_t);
-
 }
