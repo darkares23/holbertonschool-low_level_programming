@@ -8,23 +8,21 @@
  * Return: pointer to the start of located substring
  */
 
-
 char *_strstr(char *haystack, char *needle)
 {
 
-while (*haystack != '\0')
-{
-char *star = haystack, *pattern = needle;
+	while (*haystack != '\0')
+	{
+		char *star = haystack, *pattern = needle;
 
-while (*pattern == *haystack && *pattern != '\0'
-&& *haystack != '\0')
-{
-haystack++;
-pattern++;
-}
-if (*pattern == '\0')
-return (star);
-haystack = star + 1;
-}
-return (NULL);
+		while (*pattern == *haystack && *pattern != '\0' && *haystack != '\0')
+		{
+			haystack++;
+			pattern++;
+		}
+		if (*pattern == '\0')
+			return (star);
+		haystack = star + 1;
+	}
+	return (NULL);
 }

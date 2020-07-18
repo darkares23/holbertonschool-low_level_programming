@@ -1,6 +1,6 @@
 ##STATIC LIBRRIES##
 
-*This project is about how to use and creaye static libraries*
+*This project is about how to use and create static libraries*
 
 *Task 0: added libholberton.a static library  containing the next functions*
 

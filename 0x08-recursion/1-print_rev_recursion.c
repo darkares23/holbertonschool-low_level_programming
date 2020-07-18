@@ -8,10 +8,10 @@
 
 void _print_rev_recursion(char *s)
 {
-if (!*s) /* this means s pointer is the null position */
-{
-return;
-}
-_print_rev_recursion(s + 1);
-_putchar(*s);
+	if (!*s) /* this means s pointer is the null position */
+	{
+		return;
+	}
+	_print_rev_recursion(s + 1);
+	_putchar(*s);
 }

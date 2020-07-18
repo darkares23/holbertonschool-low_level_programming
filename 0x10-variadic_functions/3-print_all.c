@@ -59,7 +59,7 @@ void string_print(char *sep, va_list list)
  * @format: Type of data to print
  */
 
-void print_all(const char * const format, ...)
+void print_all(const char *const format, ...)
 {
 
 	fmType form[] = {
@@ -67,8 +67,7 @@ void print_all(const char * const format, ...)
 		{"i", int_print},
 		{"f", float_print},
 		{"s", string_print},
-		{NULL, NULL}
-	};
+		{NULL, NULL}};
 
 	va_list list;
 	int i = 0, j = 0;
