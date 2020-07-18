@@ -7,10 +7,10 @@
 */
 void print_line(int n)
 {
-int large;
-for (large = 0; large < n; large++)
-{
-_putchar('_');
-}
-_putchar('\n');
+	int large;
+	for (large = 0; large < n; large++)
+	{
+		_putchar('_');
+	}
+	_putchar('\n');
 }
