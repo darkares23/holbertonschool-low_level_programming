@@ -8,7 +8,7 @@
 
 void _print_rev_recursion(char *s)
 {
-if (!*s) /* this means s pointer diferent to the null position */
+if (!*s) /* this means s pointer is the null position */
 {
 return;
 }

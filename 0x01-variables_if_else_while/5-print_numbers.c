@@ -6,9 +6,9 @@
 */
 int main(void)
 {
-char n;
-for (n = 0 ; n <= 9 ; n++)
-printf("%d", n);
-printf("\n");
-return (0);
+	char n;
+	for (n = 0; n <= 9; n++)
+		printf("%d", n);
+	printf("\n");
+	return (0);
 }

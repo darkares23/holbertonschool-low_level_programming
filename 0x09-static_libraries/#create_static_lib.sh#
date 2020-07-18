@@ -1,0 +1,3 @@
+#!/bin/bash
+gcc 
+ar rc liball.a *.c

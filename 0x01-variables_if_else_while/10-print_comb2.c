@@ -6,19 +6,19 @@
 */
 int main(void)
 {
-int numA, numB, numC;
-for (numA = 0; numA < 100; numA++)
-{
-numB = numA / 10;
-numC = numA % 10;
-putchar(numB + '0');
-putchar(numC + '0');
-if (numA < 99)
-{
-putchar(',');
-putchar(' ');
-}
-}
-putchar('\n');
-return (0);
+	int numA, numB, numC;
+	for (numA = 0; numA < 100; numA++)
+	{
+		numB = numA / 10;
+		numC = numA % 10;
+		putchar(numB + '0');
+		putchar(numC + '0');
+		if (numA < 99)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
 }

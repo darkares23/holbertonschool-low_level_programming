@@ -19,7 +19,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (count1 = 0; count1 < ac; count1++)
 	{
-		for (count2 = 0; av[count2] != '\0' ; count2++)
+		for (count2 = 0; av[count2] != '\0'; count2++)
 		{
 			count3++;
 		}
@@ -33,11 +33,11 @@ char *argstostr(int ac, char **av)
 
 	for (count1 = 0; count1 < ac; count1++)
 	{
-		for (count2 = 0; av[count2] ; count2++)
+		for (count2 = 0; av[count2]; count2++)
 		{
 			ptr[count3] = av[count1][count2];
 			if (av[count1][count2] == '\0')
-			count3++;
+				count3++;
 		}
 		count2 = 0;
 	}

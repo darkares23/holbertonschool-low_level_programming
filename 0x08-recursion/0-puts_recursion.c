@@ -8,7 +8,7 @@
 
 void _puts_recursion(char *s)
 {
-	if (!*s) /* this means s pointer diferent to the null position */
+	if (!*s) /* this means s pointer is the null position */
 	{
 		_putchar('\n');
 		return;
